@@ -5,7 +5,12 @@
 
 export function getClientWithNoMoney(array) {
   // Your code goes here...
+  const clients = [];
+  for (const client of array) {
+    if (client.balance === 0) clients.push(client.name);
+  }
 
+  return clients;
 }
 
 // === TEST YOURSELF ===
